@@ -1,5 +1,5 @@
 {
-  "name": "aws-userdata-handlebars",
+  "name": "@arhea/aws-userdata-handlebars",
   "version": "0.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -20,9 +20,29 @@
     "@aws-cdk/core": "^1.21.1"
   },
   "dependencies": {
-    "@aws-cdk/aws-sns": "^1.21.1",
-    "@aws-cdk/aws-sns-subscriptions": "^1.21.1",
-    "@aws-cdk/aws-sqs": "^1.21.1",
-    "@aws-cdk/core": "^1.21.1"
-  }
+    "@aws-cdk/aws-ec2": "^1.21.1",
+    "@aws-cdk/core": "^1.21.1",
+    "handlebars": "^4.7.2"
+  },
+  "description": "This construct enables the use of Handlebars templates as Userdata. Often times UserData scripts are long, complex, and require inserting other variables from your environment. This construct extends the base functionality of the default ec2.UserData class to include Handlebars.",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arhea/aws-userdata-handlebars.git"
+  },
+  "keywords": [
+    "cdk",
+    "aws",
+    "aws-cdk",
+    "handlebars"
+  ],
+  "author": "Alex Rhea <alex.rhea@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/arhea/aws-userdata-handlebars/issues"
+  },
+  "homepage": "https://github.com/arhea/aws-userdata-handlebars#readme"
 }

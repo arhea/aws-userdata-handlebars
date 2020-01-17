@@ -1,9 +1,23 @@
-# Welcome to your CDK TypeScript Construct Library project!
+# UserData Powered By Handlebars
 
-You should explore the contents of this project. It demonstrates a CDK Construct Library that includes a construct (`AwsUserdataHandlebars`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+This construct enables the use of Handlebars templates as Userdata. Often times UserData scripts are long, complex, and require inserting other variables from your environment. This construct extends the base functionality of the default ec2.UserData class to include Handlebars.
 
-The construct defines an interface (`AwsUserdataHandlebarsProps`) to configure the visibility timeout of the queue.
+## Usage
+
+```typescript
+import { HandlebarsUserData } from '@arhea/aws-userdata-handlebars';
+import * as path from 'path';
+
+// create our object
+// for Windows add .forWindows() instead of .forLinux()
+const webUserData = HandlebarsUserData.forLinux();
+
+// load the template file
+webUserData.addTemplateFile(path.join(__dirname, 'userdata', 'webserver.handlebars'));
+
+// add data to the template in a key, value format
+webUserData.addData('loadBalancerUrl', `http://${app.loadBalancerDnsName}`);
+```
 
 ## Useful commands
 
