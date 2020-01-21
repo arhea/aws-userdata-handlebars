@@ -1,5 +1,9 @@
 # UserData Powered By Handlebars
 
+![Monthly Downloads](https://img.shields.io/npm/dm/@arhea/aws-userdata-handlebars)
+![License](https://img.shields.io/npm/l/@arhea/aws-userdata-handlebars)
+![Dependencies](https://img.shields.io/librariesio/release/npm/@arhea/aws-userdata-handlebars)
+
 This construct enables the use of Handlebars templates as Userdata. Often times UserData scripts are long, complex, and require inserting other variables from your environment. This construct extends the base functionality of the default ec2.UserData class to include Handlebars.
 
 ## Usage
